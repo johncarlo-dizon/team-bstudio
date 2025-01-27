@@ -5,7 +5,7 @@ use CodeIgniter\Model;
 
 class CardModel extends Model
 {
-
+test
   public function getCard($card)
   {
     $item = [
