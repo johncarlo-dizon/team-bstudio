@@ -13,7 +13,7 @@ class TypographyModel extends Model
                 This is a lead paragraph. It stands out from regular paragraphs.
             </p>
             ',
-        test
+         
          
             'headings' => '
             <h1>h1. Bootstrap heading</h1>
