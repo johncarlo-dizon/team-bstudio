@@ -15,3 +15,108 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
 12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 14 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\BSTUDIO\\public\\index.php')
+ERROR - 2025-01-27 15:21:09 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\laragon\www\BSTUDIO\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 D:\laragon\www\BSTUDIO\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'root', '', 'studio', 3306, '', 0)
+#1 D:\laragon\www\BSTUDIO\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\laragon\www\BSTUDIO\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\laragon\www\BSTUDIO\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `uniid`,...', Array, false)
+#4 D:\laragon\www\BSTUDIO\app\Models\OuterModel\LoginModel.php(11): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\laragon\www\BSTUDIO\app\Controllers\OuterController\Login.php(36): App\Models\OuterModel\LoginModel->verifyEmail('johncarlovictor...')
+#6 D:\laragon\www\BSTUDIO\system\CodeIgniter.php(933): App\Controllers\OuterController\Login->login()
+#7 D:\laragon\www\BSTUDIO\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OuterController\Login))
+#8 D:\laragon\www\BSTUDIO\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\laragon\www\BSTUDIO\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\laragon\www\BSTUDIO\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\laragon\www\BSTUDIO\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\laragon\www\BSTUDIO\system\rewrite.php(44): require_once('D:\\laragon\\www\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\laragon\www\BSTUDIO\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\laragon\www\BSTUDIO\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\laragon\www\BSTUDIO\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\laragon\www\BSTUDIO\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `uniid`,...', Array, false)
+#3 D:\laragon\www\BSTUDIO\app\Models\OuterModel\LoginModel.php(11): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\laragon\www\BSTUDIO\app\Controllers\OuterController\Login.php(36): App\Models\OuterModel\LoginModel->verifyEmail('johncarlovictor...')
+#5 D:\laragon\www\BSTUDIO\system\CodeIgniter.php(933): App\Controllers\OuterController\Login->login()
+#6 D:\laragon\www\BSTUDIO\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OuterController\Login))
+#7 D:\laragon\www\BSTUDIO\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\laragon\www\BSTUDIO\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 D:\laragon\www\BSTUDIO\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\laragon\www\BSTUDIO\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\laragon\www\BSTUDIO\system\rewrite.php(44): require_once('D:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2025-01-27 15:21:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `uniid`, `status`, `email`, `username`, `password`
+FROM `users`
+WHERE `email` = :email:', [...], false)
+ 3 APPPATH\Models\OuterModel\LoginModel.php(11): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\OuterController\Login.php(36): App\Models\OuterModel\LoginModel->verifyEmail('johncarlovictoriadizon@gmail.com')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\OuterController\Login->login()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OuterController\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\BSTUDIO\\public\\index.php')
+CRITICAL - 2025-01-27 15:21:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "innerlayout/base.php"
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('innerlayout/base.php')
+ 2 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('innerlayout/base', [], true)
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('dashboard_view', [], true)
+ 4 APPPATH\Controllers\Dashboard.php(37): view('dashboard_view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->dashboard('')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\BSTUDIO\\public\\index.php')
+CRITICAL - 2025-01-27 15:21:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "innerlayout/base.php"
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('innerlayout/base.php')
+ 2 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('innerlayout/base', [], true)
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('dashboard_view', [], true)
+ 4 APPPATH\Controllers\Dashboard.php(37): view('dashboard_view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->dashboard('')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\BSTUDIO\\public\\index.php')
+CRITICAL - 2025-01-27 15:21:48 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "innerlayout/base.php"
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('innerlayout/base.php')
+ 2 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('innerlayout/base', [], true)
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('dashboard_view', [], true)
+ 4 APPPATH\Controllers\Dashboard.php(37): view('dashboard_view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->dashboard('')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\BSTUDIO\\public\\index.php')
+CRITICAL - 2025-01-27 15:22:11 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "innerlayout/base.php"
+[Method: GET, Route: dashboard]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('innerlayout/base.php')
+ 2 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('innerlayout/base', [], true)
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('dashboard_view', [], true)
+ 4 APPPATH\Controllers\Dashboard.php(37): view('dashboard_view', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->dashboard('')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\laragon\\www\\BSTUDIO\\public\\index.php')
