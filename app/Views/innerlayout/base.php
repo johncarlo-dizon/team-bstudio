@@ -409,7 +409,7 @@
   
         <h6 class="fw-bold p-2   border-1  border-bottom" style="font-size:10px;">Columns</h6> 
       <div class="p-2 outer" style="border-radius:3px">
-        <form action="<?= base_url('/generateColumns') ?>" method="post">
+        <form class="p-2 rounded-2" action="<?= base_url('/generateColumns') ?>" method="post" style="background-color:#ffffff;">
           <label class="mb-2" for="columnCount" style="font-size:10px;">Number of Columns:</label><br>
           <input class="form-control" type="number" placeholder="..." id="columnCount" name="columnCount" min="1" max="20" required><br>
           <button class="btn btn-secondary w-100 text-light btn-sm" type="submit"><i class="fa-solid fa-plus"></i></button>
