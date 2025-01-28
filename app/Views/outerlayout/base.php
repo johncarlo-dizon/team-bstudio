@@ -57,7 +57,7 @@
         <div class="col-lg-6 mb-5 mb-lg-0 fixed-title-container">
           <h1 class="my-5 display-4 fw-bold pt-5" style="font-size:80px">
             BSTUDIO <br>
-            <span class="text-primary">by LL Company</span>
+            <span class="text-primary">by Code Canvas</span>
           </h1>
           <p style="color: hsl(217, 10%, 50.8%)">
             Enter your interactive Bootstrap 5 design environment. Start adding components and build layouts with a simple click, bringing your ideas to life.
