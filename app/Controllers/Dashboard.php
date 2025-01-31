@@ -15,6 +15,7 @@ class Dashboard extends BaseController
   public function __construct()
   {
     helper("form");
+    helper('Form_helper');
     $this->dashboardmodel = new DashboardModel();
     $this->session = session();
   }

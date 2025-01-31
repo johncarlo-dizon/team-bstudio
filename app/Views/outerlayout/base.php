@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bstudio</title>
+  <title>Codecanvas</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" class="rounded-5" type="image/png/jpeg" sizes="32x32" href="<?=base_url()?>/uploads/bstudio.webp">
@@ -56,8 +56,8 @@
       <div class="row gx-lg-5 align-items-start">
         <div class="col-lg-6 mb-5 mb-lg-0 fixed-title-container">
           <h1 class="my-5 display-4 fw-bold pt-5" style="font-size:80px">
-            BSTUDIO <br>
-            <span class="text-primary">by Code Canvas</span>
+          Code Canvas <br>
+            <span class="text-primary">by Code Bros</span>
           </h1>
           <p style="color: hsl(217, 10%, 50.8%)">
             Enter your interactive Bootstrap 5 design environment. Start adding components and build layouts with a simple click, bringing your ideas to life.

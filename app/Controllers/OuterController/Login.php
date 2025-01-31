@@ -9,6 +9,7 @@ class Login extends BaseController
     public $session;
     public function __construct(){
         helper('form');
+        helper('Form_helper');
         $this->session = session();
         $this->loginmodel = new LoginModel();
     }

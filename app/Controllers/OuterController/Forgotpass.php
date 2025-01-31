@@ -16,6 +16,7 @@ class Forgotpass extends BaseController
 
     public function __construct(){
         helper('form');
+        helper('Form_helper');
         helper('date');
         $this->session = \Config\Services::session();
         $this->email = \Config\Services::email();

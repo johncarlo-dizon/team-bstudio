@@ -12,6 +12,7 @@ class Register extends BaseController
     public $email;
     public function __construct(){
       helper('form');
+      helper('Form_helper');
       helper('date');
       $this->registermodel = new RegisterModel();
       $this->session = \Config\Services::session();
