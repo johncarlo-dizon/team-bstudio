@@ -16,12 +16,37 @@
       font-size: 12px;
     }
     .card-category h4{
-    font-size: 12px !important;
+    font-size: 10px !important;
     color: white !important;
     margin: 0px;
-    background-color: gray !important;
+    background-color: #3D3D3D !important;
     padding: 10px;
     }
+    .card-category .list-group-item{
+      background-color: #ffffff !important;
+      font-size: 10px !important;
+    }
+
+
+    #list-tab .list-group-item.active {
+      background-color: transparent;  
+      font-weight: bold;
+      color:  #3D3D3D; 
+    }
+
+    #list-tab .list-group-item {
+      font-size: 10px !important;
+    }
+
+    .btn-action{
+      color: #3D3D3D !important;
+      font-size: 10px !important;
+    }
+    .btn-action2{
+      background-color: #3D3D3D !important;
+      color: white;
+    }
+
     .customize-list{
       margin-top: 5px;
       border-radius: 3px !important;
@@ -62,6 +87,7 @@
       background-color: transparent !important;
       color: black !important;   
       border-radius: 5px !important;
+     
     }
     .screen-nav .screen-link:hover {
       background-color: transparent !important;
@@ -74,6 +100,7 @@
       color: gray !important;  
       margin-left: 5px;
       margin-right: 5px;
+      cursor: pointer;  
     }
 
     .codescreen pre {
@@ -129,18 +156,18 @@
 
 
     ::-webkit-scrollbar {
-        width: 5px; 
-        height: 5px; 
+        width: 4px; 
+        height: 4px; 
     }
 
     ::-webkit-scrollbar-track {
         background-color: #bae8e8;
-        border-radius: 10px;
+        border-radius: 8px;
     }
 
     ::-webkit-scrollbar-thumb {
-        background-color: #888; 
-        border-radius: 0px; 
+        background-color: #578E7E; 
+        border-radius: 2px; 
     }
     ::-webkit-scrollbar-thumb:hover {
         background-color: #555; 
@@ -153,8 +180,8 @@
     }
 
     .profile-avatar {
-      width: 170px;
-      height: 170px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
       cursor: pointer;
@@ -275,57 +302,70 @@
     <div class="col-lg-10 col-md-10 outer  main-content text-light"  >
 
 
-      <!-- Navbar -->
-            <nav class="navbar navbar-expand-sm navbar-dark sticky-top"  style="background-color:#ffffff;padding:0px !important;">
-              <div class="container-fluid d-flex justify-content-start">
-              <li class="nav-item dropdown align-items-center d-flex ms-3 me-2 my-2 " >
-                  <a class="nav-link dropdown-toggle  no-caret" href="#" role="button" data-bs-toggle="dropdown">
-                    
-                  
-             
+    <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top">
+    <div class="container-fluid d-flex align-items-center">
+        <li class="nav-item dropdown align-items-center d-flex me-2 my-2">
+            <a class="nav-link dropdown-toggle no-caret" href="#" role="button" data-bs-toggle="dropdown">
+                <?php if ($userdata->profile_pic == null): ?>
+                    <img src="<?=base_url()?>/uploads/male.jfif" alt="Avatar" style="width:40px;" class="rounded-pill">
+                <?php else: ?>
+                    <img src="<?=base_url()."/uploads/".$userdata->profile_pic?>" style="width:40px;" class="rounded-pill">
+                <?php endif; ?>
+            </a>
+            <ul class="dropdown-menu  ms-3">
+                <?=$this->renderSection("navprofile")?>
+                <hr>
+                <li><a class="dropdown-item fw-bold text-dark" style="background-color:transparent !important;" href="<?=base_url()?>/logout" style="font-size:12px">Sign out</a></li>
+            </ul>
+        </li>
+        
+  
+        <div class="d-flex align-items-center flex-grow-1">
+        <a class="navbar-brand text-dark me-3" href="#" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 1.2rem; text-transform: uppercase; transition: color 0.3s ease;">
+  CodeCanvas
+</a>
 
-                  <?php if ($userdata->profile_pic == null):?>
-                  <img src="<?=base_url()?>/uploads/male.jfif" alt="Avatar"  style="width:40px;" class="rounded-pill">
-                  <?php else:?>
-                    <img src="<?=base_url()."/uploads/".$userdata->profile_pic?>"  style="width:40px;" class="rounded-pill">
-                  <?php endif;?>
-                  </a>
-              
-                <ul class="dropdown-menu">
-                  <?=$this->renderSection("navprofile")?>
-                    <hr>
-              
-                    <li><a class="dropdown-item" href="<?=base_url()?>/logout" style="font-size:12px">Logout</a></li>
-                 </ul>
-              </li>
+            
+       
+            <div class="d-md-none dropdown">
+                <button class="btn btn-light dropdown-toggle no-caret" type="button" id="smallScreenDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-circle-chevron-down"></i>
+                </button>
 
-                <a class="navbar-brand  me-3 text-dark" href="#">BSTUDIO</a>
-                <ul class="nav nav-pills screen-nav" id="pills-tab" role="tablist">
-  <li class="nav-item screen-item">
-    <a class="nav-link  rounded-0 screen-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="true" style="font-size:12px;">User</a>
-  </li>
-  <li class="nav-item screen-item">
-    <a class="nav-link active rounded-0 screen-link" id="pills-monitor-tab" data-bs-toggle="pill" data-bs-target="#pills-monitor" type="button" role="tab" aria-controls="pills-monitor" aria-selected="false">Screen</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link rounded-0 screen-link" id="pills-code-tab" data-bs-toggle="pill" data-bs-target="#pills-code" type="button" role="tab" aria-controls="pills-code" aria-selected="false">Code</a>
-  </li>
- 
-  <button class="btn btn-light btn-sm border-light ms-1" style="font-size:10px;" onclick="copyOutput()"><i class="fa-solid fa-copy"></i> Copy Code</button>
-</ul>
+                <div class="dropdown-menu" aria-labelledby="smallScreenDropdown">
+                <ul class="nav-pills nav   screen-nav"    id="pills-tab" role="tablist">
+   
+                    <li><a class="dropdown-item rounded-0 screen-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile">User</a></li>
+                    <li><a class="dropdown-item rounded-0 screen-link" id="pills-monitor-tab" data-bs-toggle="pill" data-bs-target="#pills-monitor">Screen</a></li>
+                    <li><a class="dropdown-item rounded-0 screen-link" id="pills-code-tab" data-bs-toggle="pill" data-bs-target="#pills-code">Code</a></li>
 
-
-              </div>
-                <div class="container-fluid d-flex justify-content-end">
-                      <a href="<?= base_url('undo') ?>" class="btn btn-secondary btn-sm me-3" style="font-size:10px;"><i class="fa-solid fa-rotate-left"></i> Content</a>
-                      <a href="<?= base_url('undoLastRow') ?>" class="btn btn-secondary btn-sm me-3" style="font-size:10px;"><i class="fa-solid fa-rotate-left"></i> Row</a>
-                     
- 
-
-                      
+                </ul>
                 </div>
-            </nav>
-      <!-- Navbar -->
+            </div>
+            
+     
+            <ul class="navbar-nav nav-pills nav d-none d-md-flex  screen-nav"  id="pills-tab" role="tablist">
+                <li class="nav-item"><a class="nav-link rounded-0 screen-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile">User</a></li>
+                <li class="nav-item"><a class="nav-link rounded-0 screen-link" id="pills-monitor-tab" data-bs-toggle="pill" data-bs-target="#pills-monitor">Screen</a></li>
+                <li class="nav-item"><a class="nav-link rounded-0 screen-link" id="pills-code-tab" data-bs-toggle="pill" data-bs-target="#pills-code">Code</a></li>
+            </ul>
+        </div>
+        
+     
+        <div class="d-flex align-items-center">
+            <button class="btn btn-action btn-sm me-2" style="font-size:10px;" onclick="copyOutput()">
+                <i class="fa-solid fa-copy"></i> Copy Code
+            </button>
+            <a href="<?= base_url('undo') ?>" class="btn btn-action btn-sm me-2" style="font-size:10px;">
+                <i class="fa-solid fa-rotate-left"></i> Content
+            </a>
+            <a href="<?= base_url('undoLastRow') ?>" class="btn btn-action btn-sm me-3" style="font-size:10px;">
+                <i class="fa-solid fa-rotate-left"></i> Row
+            </a>
+        </div>
+    </div>
+</nav>
+
 
 
 
@@ -409,10 +449,10 @@
   
         <h6 class="fw-bold p-2   border-1  border-bottom" style="font-size:10px;">Columns</h6> 
       <div class="p-2 outer" style="border-radius:3px">
-        <form class="p-2 rounded-2" action="<?= base_url('/generateColumns') ?>" method="post" style="background-color:#ffffff;">
+        <form class="p-2 rounded-2" action="<?= base_url('/generateColumns') ?>" method="post" style="background-color:#3D3D3D; color:white;">
           <label class="mb-2" for="columnCount" style="font-size:10px;">Number of Columns:</label><br>
           <input class="form-control" type="number" placeholder="..." id="columnCount" name="columnCount" min="1" max="20" required><br>
-          <button class="btn btn-secondary w-100 text-light btn-sm" type="submit"><i class="fa-solid fa-plus"></i></button>
+          <button class="btn btn-light w-100 text-dark btn-sm" type="submit"><i class="fa-solid fa-plus"></i></button>
         </form>
 
         </div>
@@ -531,18 +571,15 @@
 </script>
 
 
-    <div class="modal fade" id="copyModal" tabindex="-1" aria-labelledby="copyModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered w-25">
-            <div class="modal-content w-75">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="copyModalLabel">Copied to Clipboard</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
+    <div class="modal fade border-0" id="copyModal" tabindex="-1" aria-labelledby="copyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered w-50 border-0">
+            <div class="modal-content w-75  border-0">
+        
+                <div class="modal-body p-3"  style="font-size:12px">
                     Codes copied to clipboard!
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                <div class="modal-footer p-0">
+                    <button type="button" class="btn btn-action2 p-2 text-light" style="font-size:10px" data-bs-dismiss="modal">OK</button>
                 </div>
             </div>
         </div>
@@ -550,3 +587,5 @@
 
 
   
+
+

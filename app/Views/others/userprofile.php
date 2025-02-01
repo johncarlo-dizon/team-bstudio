@@ -1,50 +1,57 @@
 <div class="container   border-0   outer" >
     <div class="card p-5 border-0" >
-      <div class="d-flex flex-column  mb-3" >
-
-
-      <div class="d-flex">
-        <label for="avatarInput">
-          <?php if ($userdata->profile_pic == null):?>
-          <img src="<?=base_url()?>/uploads/male.jfif" alt="Avatar" id="avatarPreview" class="profile-avatar p-2 ms-4 mt-4">
-          <?php else:?>
-            <img src="<?=base_url()."/uploads/".$userdata->profile_pic?>" alt="Avatar" id="avatarPreview" class="profile-avatar ms-4 mt-4">
-          <?php endif;?>
-        </label>
-
-        <?=form_open_multipart(base_url().'uploadimage')?>
-        <input type="file" id="avatarInput" name="userimage" class="d-none" accept="image/*">
-        <input type="hidden" name="userimage_userid" value="<?=$userdata->userid?>">
-        <div class="d">
-        <button type="submit" id="saveimage" class="btn btn-primary ms-4 mt-5 d-none">Save Image</button>
-        </div>
-   
-        <?=form_close()?>
-      </div>
-
-         
-
-     
-
-
-   
-        <small class="text-muted mt-3 ms-5">Click image to upload</small>
-      </div>
-      <hr>
-
-      <div class=" d-flex container  mt-3" >
+      
+ 
+<div class=" d-flex container " >
   <div  class="m-4" style="width:300px">
+
+
+  
+  <div class="d-flex flex-column  mb-3" >
+
+
+<div class="d-flex">
+  <label for="avatarInput">
+    <?php if ($userdata->profile_pic == null):?>
+    <img src="<?=base_url()?>/uploads/male.jfif" alt="Avatar" id="avatarPreview" class="profile-avatar p-2 ms-1 mt-1">
+    <?php else:?>
+      <img src="<?=base_url()."/uploads/".$userdata->profile_pic?>" alt="Avatar" id="avatarPreview" class="profile-avatar ms-1 mt-1">
+    <?php endif;?>
+  </label>
+
+  <?=form_open_multipart(base_url().'uploadimage')?>
+  <input type="file" id="avatarInput" name="userimage" class="d-none" accept="image/*">
+  <input type="hidden" name="userimage_userid" value="<?=$userdata->userid?>">
+  <div class="d">
+  <button type="submit" id="saveimage" class="btn   ms-4 mt-5 d-none" style="background-color: #3D3D3D !important; color:white; font-size:8px !important">Save Image</button>
+  </div>
+
+  <?=form_close()?>
+</div>
+
+   
+
+
+
+
+
+  <small class="text-muted mt-3 ms-1">Click image to upload</small>
+</div>
+
+<hr>
+
     <div class="list-group" id="list-tab" role="tablist">
       <a class="list-group-item list-group-item-action active border-0 my-1" id="list-profile-list" data-bs-toggle="list" href="#list-profile" role="tab" aria-controls="list-profile">Profile</a>
-      <a class="list-group-item list-group-item-action   border-0 my-1" id="list-password-list" data-bs-toggle="list" href="#list-password" role="tab" aria-controls="list-password">Change Password</a>
+      <a class="list-group-item list-group-item-action   border-0 my-1" id="list-password-list" data-bs-toggle="list" href="#list-password" role="tab" aria-controls="list-password">
+        Password</a>
  
       
     </div>
   </div>
 
-  <div class="border"></div>
  
-  <div class="ms-4 border-right border-1" style="height:340px;width:600px" >
+ 
+  <div class="ms-4 border-right border-1 p-4 bg-light rounded-2  " style="height:340px;width:600px;box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;" >
     <div class="tab-content" id="nav-tabContent">
       <!-- PROFILE -->
       <div class="tab-pane fade show active" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
@@ -59,7 +66,7 @@
               <input type="email" id="email" class="form-control"  value="<?=ucfirst($userdata->email)?>" readonly>
             </div>
             <input type="hidden" name="user_userid" value="<?=$userdata->userid?>">
-            <button type="submit" id="saveChangesBtn" class="btn btn-primary d-none">Save Changes</button>
+            <button type="submit" id="saveChangesBtn" class="btn  d-none p-2  mt-3"  style="background-color: #3D3D3D !important; color:white">Save Changes</button>
             <?=form_close()?>
       </div>
 
@@ -80,7 +87,7 @@
               <label for="confirmPassword"  class="form-label">Confirm New Password</label>
               <input type="password" name="confirmPassword"  id="confirmPassword" class="form-control" placeholder="Confirm new password">
             </div>
-            <button type="submit" class="btn btn-primary">Change Password</button>
+            <button type="submit" class="btn mt-3"  style="background-color: #3D3D3D !important; color:white">Change Password</button>
             <?=form_close()?>
       </div>
  
