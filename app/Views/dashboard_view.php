@@ -23,7 +23,7 @@
                     <?php if (!empty($content)): ?>
                         <?= $content; ?>
                     <?php else: ?>
-                        <div class="bg-dark h-100 w-100 text-center text-light border border-light">R <?= $rowIndex + 1 ?>, C <?= $colIndex + 1 ?></div>
+                        <div class="bg-dark h-100 w-100 text-center text-light  rowcss  ">R <?= $rowIndex + 1 ?>, C <?= $colIndex + 1 ?></div>
                     <?php endif; ?>
                 </div>
             <?php endforeach; ?>
