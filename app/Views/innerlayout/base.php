@@ -25,6 +25,10 @@
       background-color: #3D3D3D !important;
       color: white;
     }
+    .btn-action:hover{
+      color: var(--text-color);
+      font-weight:bold;
+    }
 
     .customize-list{
       margin-top: 5px;
@@ -302,7 +306,6 @@
           background-color: transparent !important;
           font-weight: bolder;  
           border-radius: 5px !important;
-          color: var(--text-color) !important;
         }
 
         .screen-nav .screen-link {
