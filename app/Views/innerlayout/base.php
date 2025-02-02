@@ -12,7 +12,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <style>
-      *{
+    *{
       font-size: 12px;
     }
 
@@ -205,6 +205,8 @@
         }
 
 
+
+
         :root {
           --outer-background-color: #bae8e8;
           --inner-background-color: #ffffff;
@@ -217,6 +219,7 @@
           --cardlisttext-color:  #3D3D3D ; 
           --codesc-background-color: #233142 ;
         }
+        
 
 
         body.dark-mode {
@@ -231,7 +234,7 @@
           --cardlist-color:  #292929     ; 
           --cardlisttext-color:  #B3B3B3 ; 
         }
-
+ 
         .outer {
           background-color: var(--outer-background-color);
           color: var(--text-color);
@@ -260,13 +263,17 @@
           font-size: 10px !important;
         }
 
-        
+
+
+
         .form-item{
         background-color:var(--form-color);
         color: white;
         }
 
-        
+
+
+
         .brand {
           color: var(--text-color) !important;
         }
@@ -305,13 +312,13 @@
           cursor: pointer;  
         }
 
-
+ 
   </style>
 </head>
 <body>
 
 
-test
+
 
 <div id="customNotificationModal" class="custom-modal">
     <div class="custom-modal-header">
@@ -466,15 +473,15 @@ test
 
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-monitor" role="tabpanel" aria-labelledby="pills-monitor-tab">
-            <div class="monitor-screen border-1 border text-dark m-2  p-0" style="height:88vh;  overflow: scroll; ">
+            <div class="monitor-screen border-0 border text-dark m-2 inner p-0" style="height:88vh;  overflow: scroll; ">
                         <div id="output">
                             <?=$this->renderSection("monitor")?>
                         </div> 
             </div> 
           </div>
 
-          <div class="tab-pane fade" id="pills-code" role="tabpanel" aria-labelledby="pills-home-tab">
-            <div class="monitor-screen border-1 border text-dark  m-2   bg-dark p-0" style="height:88vh;  overflow: scroll; ">
+          <div class="tab-pane fade " id="pills-code" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="monitor-screen border-0 border text-dark code-sc  m-2   bg-dark p-0" style="height:88vh;  overflow: scroll; ">
                 <span>
         
             
@@ -487,7 +494,7 @@ test
 
 
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-          <div class="monitor-screen border-1 border text-dark  m-2 p-0   bg-light p-0" style="height:88vh; overflow: scroll; ">
+          <div class="monitor-screen border-0 border text-dark  m-2 p-0   inner p-0" style="height:88vh;  ">
                    <?=$this->renderSection("userprofile")?>
             </div> 
           </div>
@@ -512,21 +519,8 @@ test
 
 
 
-
- 
-
-
-
-
-
-
-
-
-
-
-
 <!-- SECOND COLUMN START -->
-    <div class="col-lg-2 col-md-2   sidebar-content inner  p-3"  >
+    <div class="col-lg-2 col-md-2   sidebar-content   p-3 inner"  >
 
         <!-- COLUMNS S-->
         <div class="d-flex flex-column sticky-top">
@@ -544,9 +538,7 @@ test
        <!-- COLUMNS E-->
 
 
-
     <br><br> 
-
 
 
  
@@ -556,7 +548,7 @@ test
 
         <ul class="nav nav-tabs ">
           <li class="nav-item dropdown w-100  custom-dropdown">
-            <a class="fw-bold btn border-0 brand dropdown-toggle rounded-0 p-2 text-dark w-100 text-start" data-bs-toggle="dropdown" href="#" style="font-size:10px;">Components</a>
+            <a class="fw-bold btn border-0 dropdown-toggle rounded-0 p-2 brand w-100 text-start" data-bs-toggle="dropdown" href="#" style="font-size:10px;">Components</a>
             <?=$this->include("others/container")?>
      
           </li>
@@ -576,7 +568,6 @@ test
     <br><br> 
 
 
-
  
 <!-- CONTENTS S-->
 <div class="d-flex flex-column " >
@@ -584,7 +575,7 @@ test
 
   <ul class="nav nav-tabs ">
     <li class="nav-item dropdown w-100  custom-dropdown">
-      <a class="fw-bold btn border-0 brand dropdown-toggle rounded-0 p-2 text-dark w-100 text-start" data-bs-toggle="dropdown" href="#content" style="font-size:10px;">Content and Forms</a>
+      <a class="fw-bold btn border-0 dropdown-toggle rounded-0 p-2 brand w-100 text-start" data-bs-toggle="dropdown" href="#content" style="font-size:10px;">Content and Forms</a>
       <?=$this->include("others/contents")?>
 
     </li>
