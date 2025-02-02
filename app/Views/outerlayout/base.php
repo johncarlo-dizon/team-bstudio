@@ -141,7 +141,7 @@
 
           
           <p class="text-muted">
-          Dive into your interactive Code Canvas design environment. Effortlessly add components and create layouts with a single click, turning your ideas into reality.
+          Explore your interactive Code Canvas environment, designed to help beginner IT students easily understand the basics. Add components and create layouts with a single click, transforming your ideas into real projects.
           </p>
         </div>
 
