@@ -1,5 +1,5 @@
 <div class="container   border-0   outer" >
-    <div class="card p-5 border-0" >
+    <div class="card inner p-5 border-0" >
       
  
 <div class=" d-flex container " >
@@ -51,7 +51,7 @@
 
  
  
-  <div class="ms-4 border-right border-1 p-4 bg-light rounded-2  " style="height:340px;width:600px;box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;" >
+  <div class="ms-4 border-right border-1 p-4 inner rounded-2  " style="height:340px;width:600px;box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;" >
     <div class="tab-content" id="nav-tabContent">
       <!-- PROFILE -->
       <div class="tab-pane fade show active" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
