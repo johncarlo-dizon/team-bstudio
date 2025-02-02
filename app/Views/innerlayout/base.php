@@ -173,7 +173,7 @@
 
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-monitor" role="tabpanel" aria-labelledby="pills-monitor-tab">
-            <div class="monitor-screen border-1 border text-dark m-2  p-0" style="height:88vh;background-color:#ffffff;  overflow: scroll; ">
+            <div class="monitor-screen border-1 border text-dark m-2  p-0" style="height:88vh;  overflow: scroll; ">
                         <div id="output">
                             <?=$this->renderSection("monitor")?>
                         </div> 
@@ -181,7 +181,7 @@
           </div>
 
           <div class="tab-pane fade" id="pills-code" role="tabpanel" aria-labelledby="pills-home-tab">
-            <div class="monitor-screen border-1 border text-dark  m-2   bg-dark p-0" style="height:88vh;background-color:#233142;  overflow: scroll; ">
+            <div class="monitor-screen border-1 border text-dark  m-2   bg-dark p-0" style="height:88vh;  overflow: scroll; ">
                 <span>
         
             
@@ -194,7 +194,7 @@
 
 
           <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-          <div class="monitor-screen border-1 border text-dark  m-2 p-0   bg-light p-0" style="height:88vh;background-color:#233142;  overflow: scroll; ">
+          <div class="monitor-screen border-1 border text-dark  m-2 p-0   bg-light p-0" style="height:88vh; overflow: scroll; ">
                    <?=$this->renderSection("userprofile")?>
             </div> 
           </div>
