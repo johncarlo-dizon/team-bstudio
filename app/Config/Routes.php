@@ -54,3 +54,4 @@ $routes->post('/changepassword', 'Userprofile::changepassword');
 $routes->post('/savetemplate', 'Userprofile::savetemplate');
 
 $routes->post('/savecode', 'SaveCode::save');
+$routes->get('selecttemp/(:any)', 'Dashboard::selectTemp/$1');
