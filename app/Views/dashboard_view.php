@@ -13,6 +13,20 @@
  
 <?= $this->section("monitor") ?>
 
+
+        <?php if (session()->has('selected_tempname')): ?>
+        
+        <?php
+        $content = session()->get('selected_code_content');
+        $content = str_replace(['<pre>', '</pre>', '<code>', '</code>'], '', $content);
+        echo $content;
+        ?>
+        
+        <?php endif; ?>
+
+
+
+
     <?php
     $rows = $_SESSION['rows'] ?? [];
     $columns = $_SESSION['columns'] ?? [];
