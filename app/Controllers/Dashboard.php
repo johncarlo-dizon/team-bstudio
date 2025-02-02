@@ -41,6 +41,23 @@ class Dashboard extends BaseController
   }
 
 
+  public function selectTemp($tempname)
+  {
+      
+      $codeData = $this->codeModel->where('tempname', $tempname)->first();
+
+      if (!$codeData) {
+          return redirect()->to('/dashboard')->with('error', 'Template not found.');
+      }
+
+      
+      session()->set('selected_tempname', $codeData['tempname']);
+      session()->set('selected_code_content', $codeData['code_content']);
+
+      return redirect()->to('/dashboard'); 
+  }
+
+
   
 
  
