@@ -125,5 +125,34 @@
 </footer>
 <!-- Footer -->
 
+
+
+
+
+
+<script>
+  const names = ["John Carlo", "Aaron Jireh", "Joseph Lee", "Joel","Jomel","Code Bros"];
+  let index = 0;
+  const nameElement = document.getElementById("nameDisplay");
+
+  function changeName() {
+    nameElement.classList.add("fade-out");
+
+    setTimeout(() => {
+      nameElement.textContent = names[index];
+      nameElement.classList.remove("fade-out");
+
+    
+      setTimeout(() => {
+        nameElement.style.transition = "opacity 1s ease-in-out";  
+      }, 50);   
+
+      index = (index + 1) % names.length;
+    }, 1000);  
+  }
+
+  setInterval(changeName, 2000);
+</script>
+
 </body>
 </html>
