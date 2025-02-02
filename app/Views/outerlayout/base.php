@@ -161,7 +161,7 @@
 <!-- Footer -->
 <footer class="footer">
   <div class="container">
-    <p class="mb-0">&copy; 2025 Codecanvas by Code Bros. All rights reserved.</p>
+    <p class="mb-0">&copy; 2025 Codecanvas by  <img src="<?=base_url()?>/uploads/CBN.png" alt=""   style="height:12px;width:12px; background-color:white; border-radius:999px"> Code Bros . All rights reserved.      </p>
   </div>
 </footer>
 <!-- Footer -->
