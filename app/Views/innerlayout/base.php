@@ -333,6 +333,10 @@
           border:var(--border-color) !important ;
         }
  
+        .btn-add{
+          background-color: var(--outer-background-color);
+          color: var(--text-color) !important;
+        }
   </style>
 </head>
 <body>
@@ -560,7 +564,7 @@
         <form class="p-2 rounded-2 form-item" action="<?= base_url('/generateColumns') ?>" method="post" >
           <label class="mb-2" for="columnCount" style="font-size:10px;">Number of Columns:</label><br>
           <input class="form-control" type="number" placeholder="..." id="columnCount" name="columnCount" min="1" max="20" required><br>
-          <button class="btn btn-light w-100 text-dark btn-sm" type="submit"><i class="fa-solid fa-plus"></i></button>
+          <button class="btn btn-add w-100 text-dark btn-sm" type="submit"><i class="fa-solid fa-plus"></i></button>
         </form>
 
         </div>
