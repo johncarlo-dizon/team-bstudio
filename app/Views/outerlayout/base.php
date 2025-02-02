@@ -89,7 +89,10 @@
     <div class="container">
       <div class="row">
         <div class="col-12 d-block d-md-none">
-          <h1 class="display-4 fw-bold">Code Canvas <br> <span class="text-success">by Code Bros</span></h1>
+        <h1 class="display-4 fw-bold">Code Canvas <br> <span class="text-success">by</span>
+          <span class="text-success name-container"  id="nameDisplay">Code Bros</span>
+        </h1>
+
         </div>
       </div>
 
