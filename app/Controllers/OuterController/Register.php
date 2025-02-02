@@ -62,7 +62,8 @@ class Register extends BaseController
                   <a href="' . base_url() . 'activate/' . $uniid . '" target="_blank">Activate My Account</a><br><br>
                   If you didn\'t request this, please ignore this email.<br><br>
                   Best regards,<br>
-                  CODE CANVAS';
+                  CODE CANVAS<br><br>
+                  <img src="' . base_url() . '/uploads/codebro.jpeg" alt="Logo" style="max-width: 200px; height: auto;">';
                   
 
                   $this->email->setTo($to);
