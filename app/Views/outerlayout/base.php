@@ -140,7 +140,7 @@
 
 
           
-          <p class="text-muted mt-2">
+          <p class="text-muted mt-4">
           Explore your interactive Code Canvas environment, designed to help beginner IT students easily understand the basics. Add components and create layouts with a single click, transforming your ideas into real projects.
           </p>
         </div>
