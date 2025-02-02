@@ -316,6 +316,11 @@
           cursor: pointer;  
         }
 
+        input {
+          background-color: var(--cardlist-color) !important;
+          color: var(--cardlisttext-color) !important;
+          border:var(--border-color) !important ;
+        }
  
   </style>
 </head>
