@@ -245,6 +245,20 @@
         .code-sc{
           background-color: var(--codesc-background-color) !important;
         }
+
+
+        .card-category h4{
+        font-size: 10px !important;
+        color: white !important;
+        margin: 0px;
+        background-color: var(--cardcategory-color);
+        padding: 10px;
+        }
+        .card-category .list-group-item{
+          background-color: var(--cardlist-color);
+          color: var(--cardlisttext-color);
+          font-size: 10px !important;
+        }
   </style>
 </head>
 <body>
