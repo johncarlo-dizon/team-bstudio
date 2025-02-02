@@ -297,6 +297,15 @@
           border-radius: 5px !important;
         }
 
+        .screen-nav .screen-link {
+          font-size: 12px;
+          color:  var(--screenlink-color);  
+          margin-left: 5px;
+          margin-right: 5px;
+          cursor: pointer;  
+        }
+
+
   </style>
 </head>
 <body>
