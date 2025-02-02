@@ -467,21 +467,21 @@
      
         <div class="d-flex align-items-center">
             <button class="btn btn-action btn-sm me-2" style="font-size:10px;" onclick="copyOutput()">
-                <i class="fa-solid fa-copy"></i> Copy Code
+                <i class="fa-solid fa-copy"></i> Copy 
             </button>
             <button type="button" class="btn btn-action btn-sm me-2" data-bs-toggle="modal" data-bs-target="#tempform">
                 <i class="fa-solid fa-floppy-disk"></i> Save 
             </button>
 
             <a href="<?= base_url('unset-session') ?>" class="btn btn-action btn-sm me-2" title="Clear Template">
-            <i class="fa-solid fa-rotate-left"></i> T
+            <i class="fa-solid fa-rotate-left"></i> Template
             </a>
 
             <a href="<?= base_url('undo') ?>" class="btn btn-action btn-sm me-2" style="font-size:10px;" title="Clear Contents/Components">
-                <i class="fa-solid fa-rotate-left"></i> C
+                <i class="fa-solid fa-rotate-left"></i> Content
             </a>
             <a href="<?= base_url('undoLastRow') ?>" class="btn btn-action btn-sm me-3" style="font-size:10px;" title="Clear Rows">
-                <i class="fa-solid fa-rotate-left"></i> R
+                <i class="fa-solid fa-rotate-left"></i> Row
             </a>
         </div>
     </div>
