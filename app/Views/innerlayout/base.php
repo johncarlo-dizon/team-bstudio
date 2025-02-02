@@ -732,7 +732,7 @@
                   <?php endforeach; ?>
             </div>
           <?php else: ?>
-              <p class="list-group-item">No code data found for this user.</p>
+              <a class="list-group-item">No code data found for this user.</a>
           <?php endif; ?>
 
             </div>
