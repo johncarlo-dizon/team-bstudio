@@ -265,6 +265,15 @@
         background-color:var(--form-color);
         color: white;
         }
+
+        
+        .brand {
+          color: var(--text-color) !important;
+        }
+
+        .screen-link{
+          color: var(--text-color) !important;
+        }
   </style>
 </head>
 <body>
