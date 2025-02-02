@@ -217,6 +217,20 @@
           --cardlisttext-color:  #3D3D3D ; 
           --codesc-background-color: #233142 ;
         }
+
+
+        body.dark-mode {
+          --outer-background-color: #1E1E1E ;
+          --inner-background-color: #121212 ;
+          --codesc-background-color: #292929 ;
+          --text-color: white ;
+          --footer-background: #333;
+          --screenlink-color: white ; 
+          --cardcategory-color:  #121212 ; 
+          --form-color:  #121212 ; 
+          --cardlist-color:  #292929     ; 
+          --cardlisttext-color:  #B3B3B3 ; 
+        }
   </style>
 </head>
 <body>
