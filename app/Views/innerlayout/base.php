@@ -302,6 +302,7 @@
           background-color: transparent !important;
           font-weight: bolder;  
           border-radius: 5px !important;
+          color: var(--text-color) !important;
         }
 
         .screen-nav .screen-link {
