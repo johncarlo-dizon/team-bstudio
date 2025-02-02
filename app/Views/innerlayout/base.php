@@ -241,6 +241,10 @@
           background-color: var(--inner-background-color);
           color: var(--text-color);
         }
+
+        .code-sc{
+          background-color: var(--codesc-background-color) !important;
+        }
   </style>
 </head>
 <body>
