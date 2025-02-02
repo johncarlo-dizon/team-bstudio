@@ -284,6 +284,19 @@
           font-size: 10px !important;
           color: var(--text-color) !important;
         }
+
+        .screen-nav .screen-link.active {
+          background-color: transparent !important;
+          font-weight: bolder;
+          border-radius: 5px !important;
+        
+        }
+        .screen-nav .screen-link:hover {
+          background-color: transparent !important;
+          font-weight: bolder;  
+          border-radius: 5px !important;
+        }
+
   </style>
 </head>
 <body>
