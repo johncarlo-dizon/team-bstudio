@@ -222,6 +222,7 @@
           --form-color:  #3D3D3D ; 
           --cardlisttext-color:  #3D3D3D ; 
           --codesc-background-color: #233142 ;
+          --border-color:  #292929   1px solid  ;
         }
         
 
@@ -237,6 +238,7 @@
           --form-color:  #121212 ; 
           --cardlist-color:  #292929     ; 
           --cardlisttext-color:  #B3B3B3 ; 
+          --border-color:  #121212     ;
         }
  
         .outer {
