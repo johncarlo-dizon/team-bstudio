@@ -165,7 +165,7 @@ class Register extends BaseController
       $curtime = now();
       $regtime = strtotime($regtime);
       $diftime = $curtime - $regtime;
-        if(3600 < $diftime)
+        if(3600 > $diftime)
         {
           return true;
         }
