@@ -141,7 +141,7 @@
 
           
           <p class="text-muted">
-            Enter your interactive Bootstrap 5 design environment. Start adding components and build layouts with a simple click, bringing your ideas to life.
+          Dive into your interactive Code Canvas design environment. Effortlessly add components and create layouts with a single click, turning your ideas into reality.
           </p>
         </div>
 
