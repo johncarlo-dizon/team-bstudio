@@ -223,7 +223,7 @@
           --cardlisttext-color:  #3D3D3D ; 
           --codesc-background-color: #233142 ;
           --border-color:  lightgray   1px solid  ;
-
+          --rowdark-color:  gray solid 1px  ;
           --rowbg-color: #1E1E1E  ;
         }
         
@@ -242,10 +242,12 @@
           --cardlisttext-color:  #B3B3B3 ; 
           --border-color:  #121212     ;
           --rowbg-color: #B3B3B3  ;
+          --rowdark-color:  #121212 solid 1px  ;
         }
 
         .rowcss{
           background-color: var(--rowbg-color);
+          border : var(--rowdark-color) !important;
         }
  
         .outer {
