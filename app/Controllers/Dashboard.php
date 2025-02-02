@@ -1,7 +1,7 @@
 <?php 
 namespace App\Controllers;
 use App\Models\DashboardModel;
-
+use App\Models\CodeModel;
 
 
 
@@ -14,10 +14,10 @@ class Dashboard extends BaseController
 
   public function __construct()
   {
-    helper("form");
-    helper('Form_helper');
-    $this->dashboardmodel = new DashboardModel();
-    $this->session = session();
+      helper("form");
+      $this->dashboardmodel = new DashboardModel();
+      $this->codeModel = new CodeModel();
+      $this->session = session();
   }
 
 
