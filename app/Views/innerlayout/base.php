@@ -263,7 +263,7 @@
 
         <ul class="nav nav-tabs ">
           <li class="nav-item dropdown w-100  custom-dropdown">
-            <a class="fw-bold btn border-0 dropdown-toggle rounded-0 p-2 text-dark w-100 text-start" data-bs-toggle="dropdown" href="#" style="font-size:10px;">Components</a>
+            <a class="fw-bold btn border-0 brand dropdown-toggle rounded-0 p-2 text-dark w-100 text-start" data-bs-toggle="dropdown" href="#" style="font-size:10px;">Components</a>
             <?=$this->include("others/container")?>
      
           </li>
@@ -291,7 +291,7 @@
 
   <ul class="nav nav-tabs ">
     <li class="nav-item dropdown w-100  custom-dropdown">
-      <a class="fw-bold btn border-0 dropdown-toggle rounded-0 p-2 text-dark w-100 text-start" data-bs-toggle="dropdown" href="#content" style="font-size:10px;">Content and Forms</a>
+      <a class="fw-bold btn border-0 brand dropdown-toggle rounded-0 p-2 text-dark w-100 text-start" data-bs-toggle="dropdown" href="#content" style="font-size:10px;">Content and Forms</a>
       <?=$this->include("others/contents")?>
 
     </li>
