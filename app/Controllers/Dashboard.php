@@ -24,19 +24,20 @@ class Dashboard extends BaseController
 
   public function dashboard()
   {
-    
-      if(!session()->has('logged_user'))
-      {
-        return redirect()->to("/");
+
+      if (!session()->has('logged_user')) {
+          return redirect()->to("/");
       }
-
+  
       $uniid = session()->get('logged_user');
-      $data['userdata'] =  $this->dashboardmodel->getLogUserdata($uniid);
-      $data['navbarClasses'] = $this->session->get("navbar");
+      $userdata = $this->dashboardmodel->getLogUserdata($uniid);
 
+      $data['userdata'] = $userdata;
+      $data['email'] = $userdata->email; 
+      $data['navbarClasses'] = $this->session->get("navbar");
+      $data['code'] = $this->codeModel->where('tempemail', $data['email'])->findAll();
 
       return view("dashboard_view", $data);
-       
   }
 
 
