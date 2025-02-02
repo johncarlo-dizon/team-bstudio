@@ -19,5 +19,14 @@ class SaveCode extends BaseController
 
   return redirect()->to('/dashboard');
   }
+
+
+  
+  public function unsetSession()
+  {
+      session()->remove('selected_code_content');   
+      session()->setTempdata('message', 'Template removed successful.', 3);
+      return redirect()->to('/dashboard');
+  }
 }
 

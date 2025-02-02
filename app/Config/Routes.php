@@ -55,3 +55,4 @@ $routes->post('/savetemplate', 'Userprofile::savetemplate');
 
 $routes->post('/savecode', 'SaveCode::save');
 $routes->get('selecttemp/(:any)', 'Dashboard::selectTemp/$1');
+$routes->get('/unset-session', 'SaveCode::unsetSession');
