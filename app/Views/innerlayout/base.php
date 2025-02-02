@@ -402,6 +402,8 @@
             <ul class="dropdown-menu  ms-3">
                 <?=$this->renderSection("navprofile")?>
                 <hr>
+                
+                <li><a class="dropdown-item fw-bold" data-bs-toggle="offcanvas" href="#templatecont" role="button" aria-controls="tempcontrol" style="background-color:transparent !important; cursor:pointer">Template </a></li>
                 <li><a class="dropdown-item fw-bold" style="background-color:transparent !important; cursor:pointer" id="darkModeToggle" style="font-size:12px">Dark Mode</a></li>
                 <li><a class="dropdown-item fw-bold" style="background-color:transparent !important;" href="<?=base_url()?>/logout" style="font-size:12px">Sign out</a></li>
 
