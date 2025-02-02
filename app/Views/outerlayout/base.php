@@ -83,6 +83,10 @@
     .name-container {
       transition: opacity 1s ease-in-out;
     }
+
+    .fade-out {
+      opacity: 0;
+    }
   </style>
 </head>
 <body>
