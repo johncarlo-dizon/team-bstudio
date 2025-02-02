@@ -445,8 +445,8 @@
                 <i class="fa-solid fa-circle-chevron-down"></i>
                 </button>
 
-                <div class="dropdown-menu" aria-labelledby="smallScreenDropdown">
-                <ul class="nav-pills nav  inner screen-nav"    id="pills-tab" role="tablist">
+                <div class="dropdown-menu inner" aria-labelledby="smallScreenDropdown">
+                <ul class="nav-pills nav    screen-nav"    id="pills-tab" role="tablist">
    
                     <li><a class="dropdown-item rounded-0 screen-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile">User</a></li>
                     <li><a class="dropdown-item rounded-0 screen-link" id="pills-monitor-tab" data-bs-toggle="pill" data-bs-target="#pills-monitor">Screen</a></li>
