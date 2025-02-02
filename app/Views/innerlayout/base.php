@@ -259,6 +259,12 @@
           color: var(--cardlisttext-color);
           font-size: 10px !important;
         }
+
+        
+        .form-item{
+        background-color:var(--form-color);
+        color: white;
+        }
   </style>
 </head>
 <body>
