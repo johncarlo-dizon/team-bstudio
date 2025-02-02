@@ -203,6 +203,20 @@
                 transform: translateY(0);
             }
         }
+
+
+        :root {
+          --outer-background-color: #bae8e8;
+          --inner-background-color: #ffffff;
+          --text-color: #000;
+          --footer-background: #f4f4f4;
+          --screenlink-color: gray ; 
+          --cardcategory-color:  #3D3D3D ; 
+          --cardlist-color:  #ffffff  ; 
+          --form-color:  #3D3D3D ; 
+          --cardlisttext-color:  #3D3D3D ; 
+          --codesc-background-color: #233142 ;
+        }
   </style>
 </head>
 <body>
