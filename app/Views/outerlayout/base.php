@@ -80,6 +80,7 @@
       bottom: 0;
     }
 
+
     .name-container {
       transition: opacity 1s ease-in-out;
     }
@@ -87,6 +88,7 @@
     .fade-out {
       opacity: 0;
     }
+ 
   </style>
 </head>
 <body>
@@ -97,16 +99,47 @@
     <div class="container">
       <div class="row">
         <div class="col-12 d-block d-md-none">
-        <h1 class="display-4 fw-bold">Code Canvas <br> <span class="text-success">by</span>
-          <span class="text-success name-container"  id="nameDisplay">Code Bros</span>
-        </h1>
-
+          <h1 class="display-4 fw-bold">Code Canvas <br> <span class="text-success">by Code Bros</span></h1>
         </div>
       </div>
 
       <div class="row gx-lg-5 align-items-center">
         <div class="col-lg-6 d-none d-md-block">
-          <h1 class="display-4 fw-bold">Code Canvas <br> <span class="text-success">by Code Bros</span></h1>
+          <h1 class="display-4 fw-bold">Code Canvas <br> <span class="text-success">by</span>
+          <span class="text-success name-container"  id="nameDisplay">Code Bros</span>
+        </h1>
+
+       
+
+
+        <script>
+  const names = ["John Carlo", "Aaron Jireh", "Joseph Lee", "Joel","Jomel","Code Bros"];
+  let index = 0;
+  const nameElement = document.getElementById("nameDisplay");
+
+  function changeName() {
+    nameElement.classList.add("fade-out");
+
+    setTimeout(() => {
+      nameElement.textContent = names[index];
+      nameElement.classList.remove("fade-out");
+
+    
+      setTimeout(() => {
+        nameElement.style.transition = "opacity 1s ease-in-out";  
+      }, 50);   
+
+      index = (index + 1) % names.length;
+    }, 1000);  
+  }
+
+  setInterval(changeName, 2000);
+</script>
+
+
+
+
+          
           <p class="text-muted">
             Enter your interactive Bootstrap 5 design environment. Start adding components and build layouts with a simple click, bringing your ideas to life.
           </p>
@@ -132,35 +165,6 @@
   </div>
 </footer>
 <!-- Footer -->
-
-
-
-
-
-
-<script>
-  const names = ["John Carlo", "Aaron Jireh", "Joseph Lee", "Joel","Jomel","Code Bros"];
-  let index = 0;
-  const nameElement = document.getElementById("nameDisplay");
-
-  function changeName() {
-    nameElement.classList.add("fade-out");
-
-    setTimeout(() => {
-      nameElement.textContent = names[index];
-      nameElement.classList.remove("fade-out");
-
-    
-      setTimeout(() => {
-        nameElement.style.transition = "opacity 1s ease-in-out";  
-      }, 50);   
-
-      index = (index + 1) % names.length;
-    }, 1000);  
-  }
-
-  setInterval(changeName, 2000);
-</script>
 
 </body>
 </html>
