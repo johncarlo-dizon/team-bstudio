@@ -69,7 +69,7 @@
     <div class="col-lg-10 col-md-10 outer  main-content text-light"  >
 
 
-    <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top">
+    <nav class="navbar navbar-expand-md navbar-light   sticky-top inner">
     <div class="container-fluid d-flex align-items-center">
         <li class="nav-item dropdown align-items-center d-flex me-2 my-2">
             <a class="nav-link dropdown-toggle no-caret" href="#" role="button" data-bs-toggle="dropdown">
@@ -82,13 +82,37 @@
             <ul class="dropdown-menu  ms-3">
                 <?=$this->renderSection("navprofile")?>
                 <hr>
-                <li><a class="dropdown-item fw-bold text-dark" style="background-color:transparent !important;" href="<?=base_url()?>/logout" style="font-size:12px">Sign out</a></li>
+                <li><a class="dropdown-item fw-bold" style="background-color:transparent !important; cursor:pointer" id="darkModeToggle" style="font-size:12px">Dark Mode</a></li>
+                <li><a class="dropdown-item fw-bold" style="background-color:transparent !important;" href="<?=base_url()?>/logout" style="font-size:12px">Sign out</a></li>
+
+
+
+                <script>
+  const darkModeToggle = document.getElementById('darkModeToggle');
+
+  darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    if (document.body.classList.contains('dark-mode')) {
+      localStorage.setItem('darkMode', 'enabled');
+      darkModeToggle.textContent = 'Light Mode';
+    } else {
+      localStorage.setItem('darkMode', 'disabled');
+      darkModeToggle.textContent = 'Dark Mode';
+    }
+  });
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+    darkModeToggle.textContent = 'Light Mode';
+  }
+</script>
+
+
             </ul>
         </li>
         
   
         <div class="d-flex align-items-center flex-grow-1">
-        <a class="navbar-brand text-dark me-3" href="#" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 1.2rem; text-transform: uppercase; transition: color 0.3s ease;">
+        <a class="navbar-brand brand  me-3" href="#" style="font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 1.2rem; text-transform: uppercase; transition: color 0.3s ease;">
   CodeCanvas
 </a>
 
