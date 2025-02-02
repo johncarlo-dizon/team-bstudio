@@ -79,6 +79,10 @@
       position: absolute;
       bottom: 0;
     }
+
+    .name-container {
+      transition: opacity 1s ease-in-out;
+    }
   </style>
 </head>
 <body>
