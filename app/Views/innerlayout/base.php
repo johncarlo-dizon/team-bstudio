@@ -467,6 +467,9 @@
             <button class="btn btn-action btn-sm me-2" style="font-size:10px;" onclick="copyOutput()">
                 <i class="fa-solid fa-copy"></i> Copy Code
             </button>
+            <button type="button" class="btn btn-action btn-sm me-2" data-bs-toggle="modal" data-bs-target="#tempform">
+                <i class="fa-solid fa-floppy-disk"></i> Save 
+            </button>
             <a href="<?= base_url('undo') ?>" class="btn btn-action btn-sm me-2" style="font-size:10px;">
                 <i class="fa-solid fa-rotate-left"></i> Content
             </a>
