@@ -233,14 +233,14 @@
 
 
 <!-- SECOND COLUMN START -->
-    <div class="col-lg-2 col-md-2   sidebar-content   p-3"  >
+    <div class="col-lg-2 col-md-2   sidebar-content inner  p-3"  >
 
         <!-- COLUMNS S-->
         <div class="d-flex flex-column sticky-top">
   
         <h6 class="fw-bold p-2   border-1  border-bottom" style="font-size:10px;">Columns</h6> 
       <div class="p-2 outer" style="border-radius:3px">
-        <form class="p-2 rounded-2" action="<?= base_url('/generateColumns') ?>" method="post" >
+        <form class="p-2 rounded-2 form-item" action="<?= base_url('/generateColumns') ?>" method="post" >
           <label class="mb-2" for="columnCount" style="font-size:10px;">Number of Columns:</label><br>
           <input class="form-control" type="number" placeholder="..." id="columnCount" name="columnCount" min="1" max="20" required><br>
           <button class="btn btn-light w-100 text-dark btn-sm" type="submit"><i class="fa-solid fa-plus"></i></button>
