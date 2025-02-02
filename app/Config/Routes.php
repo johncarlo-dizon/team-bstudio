@@ -52,3 +52,5 @@ $routes->post('/uploadimage', 'Userprofile::uploadimage');
 $routes->post('/changeusername', 'Userprofile::changeusername');
 $routes->post('/changepassword', 'Userprofile::changepassword');
 $routes->post('/savetemplate', 'Userprofile::savetemplate');
+
+$routes->post('/savecode', 'SaveCode::save');
