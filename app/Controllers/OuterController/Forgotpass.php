@@ -59,7 +59,7 @@ class Forgotpass extends BaseController
                         If you didn\'t request this, please ignore this email.<br><br>
                         Best regards,<br>
                         CODE CANVAS<br><br>
-                      <img src="' . base_url() . '/uploads/codebro.jpeg" alt="Logo" style="max-width: 200px; height: auto;">';
+                      <img src="' . base_url() . '/uploads/codebro.jpeg" alt="Code Bro Logo" style="max-width: 200px; height: auto;">';
                         
                         $this->email->setTo($to);
                         $this->email->setFrom("johncarlovictoriadizon@gmail.com", "Info");
