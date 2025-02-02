@@ -274,6 +274,16 @@
         .screen-link{
           color: var(--text-color) !important;
         }
+
+        #list-tab .list-group-item.active {
+          font-weight: bold;
+        }
+
+        #list-tab .list-group-item {
+          background-color: var(--inner-background-color); 
+          font-size: 10px !important;
+          color: var(--text-color) !important;
+        }
   </style>
 </head>
 <body>
