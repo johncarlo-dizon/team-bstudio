@@ -231,6 +231,16 @@
           --cardlist-color:  #292929     ; 
           --cardlisttext-color:  #B3B3B3 ; 
         }
+
+        .outer {
+          background-color: var(--outer-background-color);
+          color: var(--text-color);
+        }
+
+        .inner {
+          background-color: var(--inner-background-color);
+          color: var(--text-color);
+        }
   </style>
 </head>
 <body>
