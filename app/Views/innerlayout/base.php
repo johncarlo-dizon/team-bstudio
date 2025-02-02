@@ -716,6 +716,29 @@
   
 
 
+
+
+        <div class="offcanvas offcanvas-end inner" tabindex="-1" id="templatecont" aria-labelledby="tempcontrol">
+            <div class="offcanvas-header mt-4">
+              <h5 class="offcanvas-title" id="tempcontrol">Saved Templates</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+            <?php if (isset($code) && !empty($code)): ?>
+              <div class="card-category">
+                  <?php foreach ($code as $row): ?>
+                      <a class="list-group-item my-1" href="<?=base_url()?>selecttemp/<?php echo $row['tempname']; ?>"><?php echo $row['tempname']; ?>  </a>
+                  <?php endforeach; ?>
+            </div>
+          <?php else: ?>
+              <p class="list-group-item">No code data found for this user.</p>
+          <?php endif; ?>
+
+            </div>
+          </div>
+
+
         <script>
             document.getElementById('codeForm').addEventListener('submit', function(event) {
                 let codeContent = document.getElementById('codeContent').innerHTML;
