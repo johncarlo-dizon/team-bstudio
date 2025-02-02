@@ -714,3 +714,9 @@
   
 
 
+        <script>
+            document.getElementById('codeForm').addEventListener('submit', function(event) {
+                let codeContent = document.getElementById('codeContent').innerHTML;
+                document.getElementById('hiddenInput').value = codeContent;
+            });
+            </script>
