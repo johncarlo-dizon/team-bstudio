@@ -217,9 +217,9 @@
           --text-color: #000;
           --footer-background: #f4f4f4;
           --screenlink-color: gray ; 
-          --cardcategory-color:  #3D3D3D ; 
+          --cardcategory-color:  #4A90E2  ; 
           --cardlist-color:  #ffffff  ; 
-          --form-color:  #3D3D3D ; 
+          --form-color:  #4A90E2  ; 
           --cardlisttext-color:  #3D3D3D ; 
           --codesc-background-color: #233142 ;
           --border-color:  lightgray   1px solid  ;
