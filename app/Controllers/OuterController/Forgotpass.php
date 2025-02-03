@@ -118,7 +118,7 @@ class Forgotpass extends BaseController
                           </p>
                           <p>If you didn\'t request this, please ignore this email.</p>
                           <p>Best regards,<br><strong>CODE CANVAS</strong></p>
-                          <img src="' . base_url() . '/uploads/codebro.jfif" alt="Logo">
+                          <img src="' . base_url() . '/uploads/codebro.jpeg" alt="Logo">
                       </div>
                       
                       <div class="footer">

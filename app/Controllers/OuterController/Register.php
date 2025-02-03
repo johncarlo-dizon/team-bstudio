@@ -115,7 +115,7 @@ class Register extends BaseController
                   <body>
                   
                   <div class="container">
-                      <img src="' . base_url() . '/uploads/codebro.jfif" alt="Logo">
+                      <img src="' . base_url() . '/uploads/codebro.jpeg" alt="Logo">
                       <h2>Activate Your Account</h2>
                       <p>Hi <strong>' . htmlspecialchars($this->request->getVar("username", FILTER_SANITIZE_STRING)) . '</strong>,</p>
                       <p>Thank you for creating an account with us!</p>
