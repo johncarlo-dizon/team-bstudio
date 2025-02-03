@@ -52,19 +52,86 @@ class Forgotpass extends BaseController
 
                         $to = $email;
                         $subject = "Password Reset Request";
-                        $message = 'Hi ' . $this->request->getVar("username", FILTER_SANITIZE_STRING) . ',<br><br>
-                        We received a request to reset your password.<br>
-                        If you made this request, please reset your password by clicking the link below:<br><br>
-                        <a href="' . base_url() . 'resetpassword/' . $uniid . '" target="_blank">Reset My Password</a><br><br>
-                        If you didn\'t request this, please ignore this email.<br><br>
-                        Best regards,<br>
-                        CODE CANVAS<br><br>
-                      <img src="' . base_url() . '/uploads/codebro.jpeg" alt="Code Bro Logo" style="max-width: 200px; height: auto;">';
-                        
-                        $this->email->setTo($to);
-                        $this->email->setFrom("johncarlovictoriadizon@gmail.com", "Info");
-                        $this->email->setSubject($subject);
-                        $this->email->setMessage($message);
+                        $message = '
+                      <!DOCTYPE html>
+                      <html>
+                      <head>
+                          <meta charset="UTF-8">
+                          <meta name="viewport" content="width=device-width, initial-scale=1">
+                          <title>Password Reset</title>
+                          <style>
+                              body {
+                                  font-family: Arial, sans-serif;
+                                  background-color: #f8f9fa;
+                                  color: #212529;
+                                  margin: 0;
+                                  padding: 0;
+                              }
+                              .container {
+                                  max-width: 500px;
+                                  margin: 20px auto;
+                                  background: #ffffff;
+                                  padding: 20px;
+                                  border-radius: 8px;
+                                  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                              }
+                              .btn {
+                                  display: inline-block;
+                                  padding: 12px 20px;
+                                  margin-top: 10px;
+                                  font-size: 16px;
+                                  color: #fff;
+                                  background: #198754; /* Bootstrap btn-success */
+                                  text-decoration: none;
+                                  border-radius: 5px;
+                              }
+                              .btn:hover {
+                                  background: #146c43;
+                              }
+                              .footer {
+                                  margin-top: 20px;
+                                  font-size: 14px;
+                                  text-align: center;
+                              }
+                              img {
+                                  max-width: 150px;
+                                  display: block;
+                                  margin: 10px auto;
+                              }
+                      
+                     
+                              @media (prefers-color-scheme: dark) {
+                                  body { background-color: #121212; color: #ffffff; }
+                                  .container { background: #1e1e1e; box-shadow: 0 2px 4px rgba(255,255,255,0.1); }
+                                  .footer { color: #b0b0b0; }
+                              }
+                          </style>
+                      </head>
+                      <body>
+                      
+                      <div class="container">
+                          <h2 style="text-align: center;">Password Reset Request</h2>
+                          <p>Hi <strong>' . htmlspecialchars($this->request->getVar("username", FILTER_SANITIZE_STRING)) . '</strong>,</p>
+                          <p>We received a request to reset your password. If you made this request, please click the button below:</p>
+                          <p style="text-align: center;">
+                              <a href="' . base_url() . 'resetpassword/' . $uniid . '" class="btn" style="color:white !important" target="_blank">Reset My Password</a>
+                          </p>
+                          <p>If you didn\'t request this, please ignore this email.</p>
+                          <p>Best regards,<br><strong>CODE CANVAS</strong></p>
+                          <img src="' . base_url() . '/uploads/codebro.jfif" alt="Logo">
+                      </div>
+                      
+                      <div class="footer">
+                          &copy; ' . date("Y") . ' CODE CANVAS. All rights reserved.
+                      </div>
+                      
+                      </body>
+                      </html>';
+                      
+                      $this->email->setTo($to);
+                      $this->email->setFrom("johncarlovictoriadizon@gmail.com", "CODE BROS");
+                      $this->email->setSubject($subject);
+                      $this->email->setMessage($message);
                         
                         if ($this->email->send()) {
                             $this->session->setTempdata('errorchange', 'Password reset link has been sent. Please check your email.',3);

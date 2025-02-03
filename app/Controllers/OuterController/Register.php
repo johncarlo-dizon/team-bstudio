@@ -56,20 +56,88 @@ class Register extends BaseController
 
                   $to = $this->request->getVar("email");
                   $subject = "Account Activation Link";
-                  $message = 'Hi ' . $this->request->getVar("username", FILTER_SANITIZE_STRING) . ',<br><br>
-                  Thank you for creating an account with us!<br>
-                  To complete your registration, please activate your account by clicking the link below:<br><br>
-                  <a href="' . base_url() . 'activate/' . $uniid . '" target="_blank">Activate My Account</a><br><br>
-                  If you didn\'t request this, please ignore this email.<br><br>
-                  Best regards,<br>
-                  CODE CANVAS<br><br>
-                  <img src="' . base_url() . '/uploads/codebro.jpeg" alt="Code Bro Logo" style="max-width: 200px; height: auto;">';
+                  $message = '
+                  <!DOCTYPE html>
+                  <html>
+                  <head>
+                      <meta charset="UTF-8">
+                      <meta name="viewport" content="width=device-width, initial-scale=1">
+                      <title>Account Activation</title>
+                      <style>
+                          body {
+                              font-family: Arial, sans-serif;
+                              background-color: #f8f9fa;
+                              color: #212529;
+                              margin: 0;
+                              padding: 0;
+                          }
+                          .container {
+                              max-width: 500px;
+                              margin: 20px auto;
+                              background: #ffffff;
+                              padding: 20px;
+                              border-radius: 8px;
+                              box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                              text-align: center;
+                          }
+                          .btn {
+                              display: inline-block;
+                              padding: 12px 20px;
+                              margin-top: 10px;
+                              font-size: 16px;
+                              color: #fff;
+                              background: #198754; /* Bootstrap btn-success */
+                              text-decoration: none;
+                              border-radius: 5px;
+                          }
+                          .btn:hover {
+                              background: #146c43;
+                          }
+                          .footer {
+                              margin-top: 20px;
+                              font-size: 14px;
+                              text-align: center;
+                          }
+                          img {
+                              max-width: 150px;
+                              display: block;
+                              margin: 10px auto;
+                          }
                   
-
+                      
+                          @media (prefers-color-scheme: dark) {
+                              body { background-color: #121212; color: #ffffff; }
+                              .container { background: #1e1e1e; box-shadow: 0 2px 4px rgba(255,255,255,0.1); }
+                              .footer { color: #b0b0b0; }
+                          }
+                      </style>
+                  </head>
+                  <body>
+                  
+                  <div class="container">
+                      <img src="' . base_url() . '/uploads/codebro.jfif" alt="Logo">
+                      <h2>Activate Your Account</h2>
+                      <p>Hi <strong>' . htmlspecialchars($this->request->getVar("username", FILTER_SANITIZE_STRING)) . '</strong>,</p>
+                      <p>Thank you for creating an account with us!</p>
+                      <p>To complete your registration, please activate your account by clicking the button below:</p>
+                      <p>
+                          <a href="' . base_url() . 'activate/' . $uniid . '" class="btn"  style="color:white !important"  target="_blank">Activate My Account</a>
+                      </p>
+                      <p>If you didn\'t request this, please ignore this email.</p>
+                      <p>Best regards,<br><strong>CODE CANVAS</strong></p>
+                  </div>
+                  
+                  <div class="footer">
+                      &copy; ' . date("Y") . ' CODE CANVAS. All rights reserved.
+                  </div>
+                  
+                  </body>
+                  </html>';
+                  
                   $this->email->setTo($to);
-                  $this->email->setFrom("johncarlovictoriadizon@gmail.com", "Info");
+                  $this->email->setFrom("johncarlovictoriadizon@gmail.com", "CODE BROS");
                   $this->email->setSubject($subject);
-                  $this->email->setMessage($message );
+                  $this->email->setMessage($message);
                 
 
                   if(  $this->email->send())
