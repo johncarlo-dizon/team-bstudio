@@ -230,7 +230,7 @@ class Register extends BaseController
 
     public function verifyExpiryTime($regtime)
     {
-      $curtime = now();
+      $curtime = time(); 
       $regtime = strtotime($regtime);
       $diftime = $curtime - $regtime;
         if(3600 < $diftime)
