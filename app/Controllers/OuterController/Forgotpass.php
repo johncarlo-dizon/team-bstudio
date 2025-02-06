@@ -202,18 +202,18 @@ class Forgotpass extends BaseController
 
     public function verifyExpiryTime($regtime)
     {
-      $curtime = time(); 
-      $regtime = strtotime($regtime);
-      $diftime = $curtime - $regtime;
-        if(3600 < $diftime)
-        {
-          return true;
+        $regtime = strtotime($regtime);
+        
+        if ($regtime === false) {
+            return false; 
         }
-        else
-        {
-          return false;
-        }
+    
+        $curtime = time(); 
+        $diftime = $curtime - $regtime;
+    
+        return $diftime > 3600; 
     }
+    
 
 
     public function changepassdone()
